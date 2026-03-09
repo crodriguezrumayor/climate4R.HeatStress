@@ -8,10 +8,18 @@ A R package for computing heat stress indices directly from climate data within 
 
 ## Installation
 
-The recommended procedure for installing the package is using the devtools package. 
+The recommended procedure for installing the package is using the remotes package. 
 
 ```R
-devtools::install_github(c("SantanderMetGroup/transformeR", "anacv/HeatStress", "crodriguezrumayor/climate4R.HeatStress"))
+install.packages("remotes", repos = "https://cloud.r-project.org")
+remotes::install_github("crodriguezrumayor/climate4R.HeatStress")
+```
+Note that the following dependencies need to be installed beforehand:
+
+```R
+remotes::install_github("SantanderMetGroup/transformeR")
+remotes::install_github("anacv/HeatStress")
+remotes::install_github("SantanderMetGroup/convertR")
 ```
 
 A list of all available indices and the atomic functions calculating them is printed on screen with:
