@@ -86,6 +86,14 @@ heatStressIndexGrid <- function(index.code,
     # Convert inputs to required units (if needed)
     if(!is.null(tas)) {
         tas.u <- getGridUnits(tas)
+        if (tolower(tas.u) %in% c("degrees celsius", "degree celsius")) {
+            attr(tas$Variable, "units") <- "degC"
+            tas.u <- "degC"
+        }
+        if (tolower(tas.u) %in% c("degrees fahrenheit", "degree fahrenheit")) {
+            attr(tas$Variable, "units") <- "degF"
+            tas.u <- "degF"
+        }
         if (ud.are.convertible(tas.u, "degC")) {
             if (ud.convert(1, tas.u, "degC") != 1) { 
                 message("[", Sys.time(), "] Converting air temperature units ...")
@@ -97,6 +105,14 @@ heatStressIndexGrid <- function(index.code,
     }
     if(!is.null(dewp)) {
         dewp.u <- getGridUnits(dewp)
+        if (tolower(dewp.u) %in% c("degrees celsius", "degree celsius")) {
+            attr(dewp$Variable, "units") <- "degC"
+            dewp.u <- "degC"
+        }
+        if (tolower(dewp.u) %in% c("degrees fahrenheit", "degree fahrenheit")) {
+            attr(dewp$Variable, "units") <- "degF"
+            dewp.u <- "degF"
+        }
         if (ud.are.convertible(dewp.u, "degC")) {
             if (ud.convert(1, dewp.u, "degC") != 1) { 
                 message("[", Sys.time(), "] Converting dew point temperature units ...")
