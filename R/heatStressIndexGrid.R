@@ -292,7 +292,7 @@ heatStressIndexGrid <- function(index.code,
         }
 
         # Update variable metadata
-        out.grid[["Variable"]][["varName"]] <- metadata$code
+        out.grid[["Variable"]] <- list(varName = metadata$code, level = NULL)
         attr(out.grid[["Variable"]], "longname") <- metadata$longname
         attr(out.grid[["Variable"]], "units") <- metadata$units
         
