@@ -43,7 +43,8 @@
 #'                                  wind = ERA5_day_sfcwind, radiation = ERA5_day_ssrd)
 #' }
 #' 
-#' @author C. Rodriguez-Rumayor
+#' @author climate4R adaptation by C. Rodriguez-Rumayor
+#' Original \pkg{HeatStress} by A. Casanueva \url{https://github.com/anacv/HeatStress}.
 #' @export
 
 heatStressIndexGrid <- function(index.code,

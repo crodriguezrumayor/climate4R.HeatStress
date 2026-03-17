@@ -69,5 +69,6 @@ wbgt_sun <- heatStressIndexGrid("wbgt_sun", tas = ERA5_day_t2m, dewp = ERA5_day_
 
 }
 \author{
-C. Rodriguez-Rumayor
+climate4R adaptation by C. Rodriguez-Rumayor
+Original \pkg{HeatStress} by A. Casanueva \url{https://github.com/anacv/HeatStress}.
 }
